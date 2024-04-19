@@ -1,9 +1,10 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import TransactionForm from "../add-transactions";
 
 
 
 
-export default function Summary(){
+export default function Summary({onClose,isOpen}){
     return <Box p="6" border={'1px solid'} borderColor={'gray.100'} overflow={'hidden'} borderRadius={'10'} background={'white'} display={'flex'}>
         <Flex w='full' justifyContent={'center'} alignItems={'center'} flexDirection={{
             base:'column',
@@ -46,6 +47,7 @@ export default function Summary(){
             </Box>
 
         </Flex>
+        <TransactionForm onClose={onClose} isOpen={isOpen}/>
 
     </Box>
 }
